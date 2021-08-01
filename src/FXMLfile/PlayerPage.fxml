@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlayerPageController">
+   <children>
+      <Pane fx:id="mainPane" prefHeight="500.0" prefWidth="600.0">
+         <children>
+            <VBox layoutX="45.0" prefHeight="387.0" prefWidth="128.0" translateY="75.0">
+               <children>
+                  <Label prefHeight="43.0" prefWidth="200.0" text="Name" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="200.0" text="Number" textAlignment="CENTER">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="49.0" prefHeight="43.0" prefWidth="200.0" text="Position" textAlignment="CENTER">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="88.0" prefHeight="43.0" prefWidth="200.0" text="Country" textAlignment="CENTER">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="128.0" prefHeight="43.0" prefWidth="200.0" text="Age" textAlignment="CENTER">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="167.0" prefHeight="43.0" prefWidth="200.0" text="Height" textAlignment="CENTER">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="206.0" prefHeight="43.0" prefWidth="200.0" text="Salary" textAlignment="CENTER">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="245.0" prefHeight="43.0" prefWidth="200.0" text="Club" textAlignment="CENTER">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="priceFieldLeft" layoutX="10.0" layoutY="290.0" prefHeight="43.0" prefWidth="200.0" text="Price" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="173.0" layoutY="75.0" prefHeight="387.0" prefWidth="223.0">
+               <children>
+                  <Label fx:id="nameField" prefHeight="43.0" prefWidth="223.0" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Segoe UI Light" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numberField" layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="223.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Segoe UI Light" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="positionField" layoutX="10.0" layoutY="75.0" prefHeight="43.0" prefWidth="223.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Segoe UI Light" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="countryField" layoutX="10.0" layoutY="128.0" prefHeight="43.0" prefWidth="223.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Segoe UI Light" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ageField" layoutX="10.0" layoutY="167.0" prefHeight="43.0" prefWidth="223.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Segoe UI Light" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="heightField" layoutX="10.0" layoutY="206.0" prefHeight="43.0" prefWidth="223.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Segoe UI Light" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="salaryField" layoutX="10.0" layoutY="245.0" prefHeight="43.0" prefWidth="223.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Segoe UI Light" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="clubField" layoutX="10.0" layoutY="250.0" prefHeight="43.0" prefWidth="223.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Segoe UI Light" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="priceFieldRight" layoutX="10.0" layoutY="290.0" prefHeight="43.0" prefWidth="223.0" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="Segoe UI Light" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Canvas fx:id="canvas" height="96.0" layoutY="-21.0" width="600.0">
+               <effect>
+                  <GaussianBlur />
+               </effect></Canvas>
+            <Label layoutX="189.0" layoutY="9.0" text="Player Details">
+               <font>
+                  <Font name="Segoe UI Light" size="40.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="image" fitHeight="128.0" fitWidth="128.0" layoutX="438.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../files/pic2.png" />
+               </image></ImageView>
+            <Line endX="477.7999267578125" layoutX="101.0" layoutY="75.0" startX="-70.19998931884766" stroke="#358dc4" strokeWidth="2.0" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

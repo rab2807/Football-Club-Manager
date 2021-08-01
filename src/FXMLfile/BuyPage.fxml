@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BuyPageController">
+   <children>
+      <ScrollPane fx:id="scrollPane" layoutX="200.0" layoutY="100.0" opacity="0.0" prefHeight="550.0" prefWidth="800.0">
+         <content>
+            <TableView fx:id="table" fixedCellSize="50.0" prefHeight="800.0" prefWidth="800.0" stylesheets="@JavaFXTC.css">
+               <columns>
+                  <TableColumn fx:id="nameCol" editable="false" prefWidth="200.0" text="Name" />
+                  <TableColumn fx:id="countryCol" prefWidth="150.0" text="Country" />
+                  <TableColumn fx:id="positionCol" prefWidth="138.3150999633789" text="Position" />
+                  <TableColumn fx:id="salaryCol" prefWidth="150.0" text="Salary" />
+                  <TableColumn fx:id="priceCol" prefWidth="150.0" text="Price" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <AnchorPane fx:id="lowerPane" prefHeight="700.0" prefWidth="200.0" translateX="-200.0">
+         <children>
+            <Rectangle fill="#183e54" height="700.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0">
+               <effect>
+                  <DropShadow height="0.0" radius="10.75" width="45.0" />
+               </effect>
+            </Rectangle>
+            <Label fx:id="clubNameLabel" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #405b87;" textFill="WHITE">
+               <font>
+                  <Font name="Gill Sans MT" size="25.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="100.0" layoutY="50.0" startX="-100.0" stroke="WHITE" />
+            <Button fx:id="homeButton" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedHome" onMouseEntered="#onMouseEnteredHome" onMouseExited="#onMouseExitedHome" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Home">
+               <font>
+                  <Font name="Gill Sans MT" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="searchButton" layoutY="185.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedSearch" onMouseEntered="#onMouseEnteredSearch" onMouseExited="#onMouseExitedSearch" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Search">
+               <font>
+                  <Font name="Gill Sans MT" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="buyButton" layoutY="285.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Buy">
+               <font>
+                  <Font name="Gill Sans MT" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="maxButton" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedMax" onMouseEntered="#onMouseEnteredMax" onMouseExited="#onMouseExitedMax" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Stats">
+               <font>
+                  <Font name="Gill Sans MT" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="logoutButton" layoutY="649.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedLogout" onMouseEntered="#onMouseEnteredLogout" onMouseExited="#onMouseExitedLogout" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Log Out">
+               <font>
+                  <Font name="Gill Sans MT" size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="upperPane" prefHeight="700.0" prefWidth="35.0" translateX="-40.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#334b9c" height="700.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0">
+               <effect>
+                  <DropShadow height="0.0" radius="9.5" width="40.0" />
+               </effect>
+            </Rectangle>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="canvasPane" layoutX="200.0" opacity="0.0" prefHeight="100.0" prefWidth="800.0">
+         <children>
+            <Canvas fx:id="canvas" height="100.0" width="800.0">
+               <effect>
+                  <GaussianBlur />
+               </effect>
+            </Canvas>
+            <Label fx:id="headingLabel" alignment="TOP_CENTER" layoutX="274.0" layoutY="21.0" prefHeight="58.0" prefWidth="252.0" text="Auction List">
+               <font>
+                  <Font name="Segoe UI Light" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <HBox fx:id="hBox" opacity="0.0" prefHeight="50.0" prefWidth="800.0" translateX="200.0" translateY="650.0">
+         <children>
+            <Button fx:id="buyPlayerButton" mnemonicParsing="false" onMouseClicked="#onMouseClickedBuyPlayer" onMouseEntered="#onMouseEnteredBuyPlayer" onMouseExited="#onMouseExitedBuyPlayer" prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: #2e869e;" text="Buy" textFill="WHITE">
+               <font>
+                  <Font name="Gill Sans MT" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="detailsButton" mnemonicParsing="false" onMouseClicked="#onMouseClickedDetails" onMouseEntered="#onMouseEnteredDetails" onMouseExited="#onMouseExitedDetails" prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: #b9b6b6;" text="Details">
+               <font>
+                  <Font name="Gill Sans MT" size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Pane fx:id="alertPane" disable="true" opacity="0.0" prefHeight="160.0" prefWidth="370.0" style="-fx-border-width: 1; -fx-border-color: #2f7184; -fx-background-color: white;" translateX="330.0" translateY="250.0">
+         <children>
+            <Label layoutX="27.0" layoutY="32.0" text="Do you want to buy this player?">
+               <font>
+                  <Font name="Gill Sans MT" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="yesButton" layoutX="76.0" layoutY="99.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedYes" onMouseEntered="#onMouseEnteredYes" onMouseExited="#onMouseExitedYes" prefHeight="34.0" prefWidth="89.0" style="-fx-background-color: transparent;" text="Yes">
+               <font>
+                  <Font name="Gill Sans MT" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="noButton" layoutX="215.0" layoutY="99.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedNo" onMouseEntered="#onMouseEnteredNo" onMouseExited="#onMouseExitedNo" style="-fx-background-color: transparent;" text="Go back">
+               <font>
+                  <Font name="Gill Sans MT" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</Pane>

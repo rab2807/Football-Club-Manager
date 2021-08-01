@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginPageController">
+   <children>
+      <Pane fx:id="canvasPane" layoutX="450.0" opacity="0.0" prefHeight="700.0" prefWidth="600.0">
+         <children>
+            <Canvas fx:id="canvas" height="700.0" width="600.0" />
+         </children>
+      </Pane>
+      <AnchorPane fx:id="lowerPane" prefHeight="200.0" prefWidth="200.0" translateX="-530.0">
+         <children>
+            <Rectangle blendMode="SRC_ATOP" fill="#334b9cbf" height="700.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-20.0" width="530.0">
+               <effect>
+                  <DropShadow height="0.0" radius="9.5" width="40.0" />
+               </effect>
+            </Rectangle>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="upperPane" prefHeight="700.0" prefWidth="400.0" translateX="-530.0">
+         <children>
+            <Rectangle fx:id="slider" blendMode="SRC_ATOP" fill="#183e54bf" height="700.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-20.0" width="530.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="0.0" radius="10.75" width="45.0" />
+               </effect></Rectangle>
+            <TextField fx:id="usernameField" layoutX="40.0" layoutY="264.0" onKeyPressed="#onKeyPressedUserNameField" prefHeight="40.0" prefWidth="400.0" promptText="Enter Club Name" style="-fx-border-color: transparent;">
+               <font>
+                  <Font name="Gill Sans MT" size="20.0" />
+               </font></TextField>
+            <Button id="submitButton" fx:id="submitButton" layoutX="97.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedSubmitButton" onMouseEntered="#onMouseEnteredSubmitButton" onMouseExited="#onMouseExitedSubmitButton" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: transparent;" text="Submit">
+               <font>
+                  <Font name="Gill Sans MT" size="20.0" />
+               </font></Button>
+            <Button id="resetButton" fx:id="resetButton" layoutX="265.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedResetButton" onMouseEntered="#onMouseEnteredResetButton" onMouseExited="#onMouseExitedResetButton" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: transparent;" text="Reset">
+               <font>
+                  <Font name="Gill Sans MT" size="20.0" />
+               </font></Button>
+            <Label fx:id="errorLabel" layoutX="40.0" layoutY="382.0" opacity="0.0" text="Login Error!" textFill="RED">
+               <font>
+                  <Font name="Gill Sans MT" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox fx:id="welcomeMsg" layoutX="182.0" layoutY="84.0" opacity="0.0" prefHeight="200.0" prefWidth="696.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="74.0" prefWidth="722.0" text="Welcome," textAlignment="CENTER">
+               <font>
+                  <Font name="Segoe UI Light" size="50.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="103.0" prefWidth="719.0" text="Label">
+               <font>
+                  <Font name="Segoe UI Light" size="70.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</Pane>
