@@ -3,9 +3,12 @@
  
 This was the term project of our Object Oriented Programming course. Along with the object oriented code structure, the project also emphasized on multithreading and socket networking.
 
-# Dependencies
-* JDK 15 (and a little bit of CSS)
-* JavaFX for GUI
+# Tech Stack and Tools
+* JDK 15
+* JavaFX
+* SceneBuilder
+* Java socket programming
+* Java multithreading
 
 # Features
 * The server has to be initiated first. Then multiple client windows can be started, but one club cannot be logged into more than one window.
